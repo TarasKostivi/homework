@@ -22,8 +22,8 @@ public class Main {
         if (determinant > 0){
             firstRoot = (-b + sqrt)/(2*a);
             secondRoot = (-b - sqrt)/(2*a);
-            System.out.println("Roots are : :" + firstRoot);
-            System.out.println("Roots are : :" + secondRoot);
+            System.out.println("Roots are ::" + firstRoot);
+            System.out.println("Roots are ::" + secondRoot);
         }else if (determinant == 0){
             System.out.println("Root is : : " + (-b + sqrt)/(2*a));
         }else {
