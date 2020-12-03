@@ -5,12 +5,14 @@ public class Main4 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 0");
-        int wrongNumber = scanner.nextInt();
 
-
-        for (int i = 0; i < wrongNumber; i++) {
-            System.out.println("You entered an incorrect number");
+        int sum = 0;
+        while (true){
+            int wrongNumber = scanner.nextInt();
+            if (wrongNumber == 0) break;
+            sum += wrongNumber;
         }
+        System.out.println("Sum is " + sum);
     }
 
 }
