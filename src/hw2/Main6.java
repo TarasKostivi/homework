@@ -1,6 +1,13 @@
+package hw2;
+
+import java.util.Scanner;
+
 public class Main6 {
     public static void main(String[] args) {
-        int[] array = new int[]{10,12,45,100,49,50,250,2};
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        int[] array = new int[n];
 
         int max = getMax(array);
         System.out.println("Max value is: " + max);
