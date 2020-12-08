@@ -1,10 +1,8 @@
-package hw2;
-
+package homeWork2;
 import java.util.Scanner;
 
 public class Main4 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 0");
 
@@ -18,4 +16,4 @@ public class Main4 {
     }
 
 }
-//Просити користувача вводити числа доти, доки він не введе нуль .
+//Просити користувача вводити числа доти, доки він не введе нуль.
