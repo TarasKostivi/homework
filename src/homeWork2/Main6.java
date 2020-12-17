@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Main6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
 
-        int[] array = new int[n];
+        int[] array = new int[10];
 
         int max = getMax(array);
         System.out.println("Max value is: " + max);
@@ -17,7 +16,8 @@ public class Main6 {
     }
     public static int getMax(int[] inputArray){
         int maxValue = inputArray[0];
-        for (int i = 1; i < inputArray.length; i++) { if (inputArray[i] > maxValue) {
+        for (int i = 1; i < inputArray.length; i++)
+        { if (inputArray[i] > maxValue) {
             maxValue = inputArray[i];
             }
         }

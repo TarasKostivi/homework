@@ -7,6 +7,7 @@ public abstract class Warrior {
     private int number;
     private int damage;
 
+
     public Warrior(String name, int hp, String weapon, int number, int damage) {
         this.name = name;
         this.hp = hp;
