@@ -8,7 +8,7 @@ public class Numbers {
         System.out.println("Enter the number");
         int num = scanner.nextInt();
 
-        if (num % 3 / 2 == 1){
+        if (num % 3 == 1){
             System.out.println("Pair");
         }else {
             System.out.println("odd");

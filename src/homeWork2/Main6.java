@@ -19,7 +19,7 @@ public class Main6 {
         for (int i = 1; i < inputArray.length; i++)
         { if (inputArray[i] > maxValue) {
             maxValue = inputArray[i];
-            }
+        }
         }
         return maxValue;
     }
@@ -27,11 +27,11 @@ public class Main6 {
         int minValue = inputArray[0];
         for (int i = 1; i < inputArray.length; i++) {
             if (inputArray[i] < minValue) {
-            minValue = inputArray[i];
+                minValue = inputArray[i];
             }
         }
         return minValue;
     }
 }
-//Створіть масив, наповніть його даними з клавіатури,
+// 6. Створіть масив, наповніть його даними з клавіатури,
 // знайдіть найбільше та найменше значення масиву.
