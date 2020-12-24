@@ -6,11 +6,11 @@ public class Main5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("8 * 9 = ");
 
-        while (true){
-            int totalSum = scanner.nextInt();
-            if (totalSum == 72) break;
+        while (scanner.nextInt() != 72){
+            System.out.println("Спробуйте ще раз");
         }
+        System.out.println("Чудово");
     }
 }
-// Задати приклад користувачу(наприклад 8*9 = ) і попросити користувача ввести відповідь,
+// 5. Задати приклад користувачу(наприклад 8*9 = ) і попросити користувача ввести відповідь,
 // він буде вводити до того, доки не введе правильну відповідь.

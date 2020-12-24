@@ -1,6 +1,5 @@
 package homeWork5.Robot;
 
-
 public class Main {
     public static void main(String[] args) {
         Robot robot = new Robot("someWork");
@@ -20,9 +19,8 @@ public class Main {
 
         Robot[] robots = {robot, robot1, robot2, robot3};
 
-
         for (int i = 0; i < robots.length; i++) {
-           robots[i].work();
+            robots[i].work();
         }
 
     }
