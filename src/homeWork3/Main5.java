@@ -11,12 +11,12 @@ public class Main5 {
         String string2 = scanner.nextLine();
         String[][] matrix = new String[4][4];
 
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.println(string1.toUpperCase());
             }
         }
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.println(string2.toUpperCase());
             }
