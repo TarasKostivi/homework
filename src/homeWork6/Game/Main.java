@@ -28,10 +28,5 @@ public class Main {
         warrior1.warriorDamage();
         warrior2.warriorDamage();
         warrior3.warriorDamage();
-
-
-
-
-
     }
 }

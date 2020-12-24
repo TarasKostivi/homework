@@ -10,6 +10,5 @@ public class Main {
         motorcycle.redesigned(4);
         motorcycle.redesigned("Green", 3);
 
-
     }
 }

@@ -1,8 +1,8 @@
 package homeWork7.second;
 
-import homeWork7.first.Numerable;
+import homeWork7.first.*;
 
-public class MyCalculator implements Numerable {
+public class MyCalculator implements Plus, Minus, Myltiply, Devide {
     @Override
     public int minus() {
         return 0;

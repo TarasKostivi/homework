@@ -1,42 +1,51 @@
 package homeWork5.Car;
 
 public class Car {
-    private String model;
-    private int year;
-    private String color;
+    private double helm;
+    private String carBody;
+    private int wheel;
 
     public Car(){
 
     }
 
-    public Car(String model, int year, String color) {
-        this.model = model;
-        this.year = year;
-        this.color = color;
+    public Car(double helm, String carBody, int wheel) {
+        this.helm = helm;
+        this.carBody = carBody;
+        this.wheel = wheel;
     }
 
-    public String getModel() {
-        return model;
+    public double getHelm() {
+        return helm;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setHelm(double helm) {
+        this.helm = helm;
     }
 
-    public int getYear() {
-        return year;
+    public String getCarBody() {
+        return carBody;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setCarBody(String carBody) {
+        this.carBody = carBody;
     }
 
-    public String getColor() {
-        return color;
+    public int getWheel() {
+        return wheel;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setWheel(int wheel) {
+        this.wheel = wheel;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "helm=" + helm +
+                ", carBody='" + carBody + '\'' +
+                ", wheel=" + wheel +
+                '}';
     }
 
     public void start(){
