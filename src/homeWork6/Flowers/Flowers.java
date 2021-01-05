@@ -4,7 +4,6 @@ public abstract class Flowers {
     private String color;
     private double price;
 
-
     public Flowers(String color, double price) {
         this.color = color;
         this.price = price;
@@ -28,8 +27,5 @@ public abstract class Flowers {
 
     public abstract boolean ollFlowers();
 
-    public void totalPrice(){
-        System.out.println("price = " + price);
-    }
 }
 

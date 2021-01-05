@@ -14,7 +14,7 @@ public class ScreenNu {
         double c = Math.abs(d - m);
 
         if (b == c) {
-            System.out.println("Number " + n + "and" + m + "equal" + d);
+            System.out.println("Number " + n + " and " + m + " equal " + d);
         } else if (b < c) {
             System.out.println("Number " + n + " shines to " + d);
         }

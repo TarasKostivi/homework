@@ -4,7 +4,6 @@ public class Orchids extends Flowers {
     private String name;
     public Orchids(String color, double price, String name) {
         super(color, price);
-
         this.name = name;
     }
 
