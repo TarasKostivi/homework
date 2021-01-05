@@ -21,7 +21,7 @@ public class Main {
 
         //Вивести всі місяці з такою ж порою року.
         for (Month month : Month.values()){
-            System.out.println(month.name() + " - " +  month.getSeason());
+            System.out.println(month.getSeason() + " - " +  month.ordinal());
         }
 
         //Вивести всі місяці які мають таку саму кількість днів.
