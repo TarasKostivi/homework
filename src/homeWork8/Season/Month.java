@@ -1,4 +1,5 @@
 package homeWork8.Season;
+
 public enum Month {
 
     JANUARY(31, Season.WINTER, "Січень"),
@@ -39,7 +40,7 @@ public enum Month {
     public static Month fromString(String monthString){
         for (Month month : values()){
             if (month.name().equalsIgnoreCase(monthString)
-            || month.title.equalsIgnoreCase(monthString)){
+                    || month.title.equalsIgnoreCase(monthString)){
                 return month;
             }
         }

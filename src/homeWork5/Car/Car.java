@@ -1,49 +1,48 @@
 package homeWork5.Car;
 
 public class Car {
-    private String model;
-    private int year;
-    private String color;
+    private Helm helm;
+    private CarBody carBody;
+    private Wheel wheel;
 
-    public Car(){
-
+    public Car(Helm helm, CarBody carBody, Wheel wheel) {
+        this.helm = helm;
+        this.carBody = carBody;
+        this.wheel = wheel;
     }
 
-    public Car(String model, int year, String color) {
-        this.model = model;
-        this.year = year;
-        this.color = color;
+    public Helm getHelm() {
+        return helm;
     }
 
-    public String getModel() {
-        return model;
+    public void setHelm(Helm helm) {
+        this.helm = helm;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public CarBody getCarBody() {
+        return carBody;
     }
 
-    public int getYear() {
-        return year;
+    public void setCarBody(CarBody carBody) {
+        this.carBody = carBody;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public Wheel getWheel() {
+        return wheel;
     }
 
-    public String getColor() {
-        return color;
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    @Override
+    public String toString() {
+        return "Car{" +
+                "helm=" + helm +
+                ", carBody=" + carBody +
+                ", wheel=" + wheel +
+                '}';
     }
-
-    public void start(){
-        System.out.println("Go GO");
-    }
-
-
 }
 // 2) Створити клас Кермо, Колесо, Кузов - описати дані класи(getters, setters, toString).
 // Всі поля повинні бути приватними. Додати методи які б виконували певні функції з полями,

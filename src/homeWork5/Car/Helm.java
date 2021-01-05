@@ -1,25 +1,40 @@
 package homeWork5.Car;
 
-public class Helm extends Car {
-       private double helmDiameter;
+public class Helm {
+    private String brand;
+    private double diameter;
 
-
-    public Helm(String model, int year, String color, double helmDiameter) {
-        super(model, year, color);
-
-        this.helmDiameter = helmDiameter;
+    public Helm(String brand, double diameter) {
+        this.brand = brand;
+        this.diameter = diameter;
     }
 
-    public double getHelmDiameter() {
-        return helmDiameter;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setHelmDiameter(double helmDiameter) {
-        this.helmDiameter = helmDiameter;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
+    public double getDiameter() {
+        return diameter;
+    }
 
-    public double helmDiameter(){
-        return helmDiameter * helmDiameter / 4 * 3.14;
+    public void setDiameter(double diameter) {
+        this.diameter = diameter;
+    }
+
+    @Override
+    public String toString() {
+        return "Helm{" +
+                "brand='" + brand + '\'' +
+                ", diameter=" + diameter +
+                '}';
+    }
+
+    public void changeDiameter(){
+        this.setDiameter(this.getDiameter() * 2);
+        System.out.println("Діаметер буде " + this.diameter);
     }
 }

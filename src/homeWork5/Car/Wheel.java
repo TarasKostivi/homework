@@ -1,24 +1,63 @@
 package homeWork5.Car;
 
-public class Wheel extends Car {
-    private double sizeWheel;
+public class Wheel {
+    private String brand;
+    private String type;
+    private String Seasonality;
+    private double pressure;
 
-    public Wheel(String model, int year, String color, double sizeWheel) {
-        super(model, year, color);
-        this.sizeWheel = sizeWheel;
+    public Wheel(String brand, String type, String seasonality, double pressure) {
+        this.brand = brand;
+        this.type = type;
+        this.Seasonality = seasonality;
+        this.pressure = pressure;
     }
 
-    public double getSizeWheel() {
-        return sizeWheel;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setSizeWheel(double sizeWheel) {
-        this.sizeWheel = sizeWheel;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public void bigSizeWheel(){
-        for (int i = 1; i < sizeWheel; i += 2) {
-            System.out.println("size wheel " + i);
-        }
+    public String getType() {
+        return type;
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getSeasonality() {
+        return Seasonality;
+    }
+
+    public void setSeasonality(String seasonality) {
+        Seasonality = seasonality;
+    }
+
+    public double getPressure() {
+        return pressure;
+    }
+
+    public void setPressure(double pressure) {
+        this.pressure = pressure;
+    }
+
+    @Override
+    public String toString() {
+        return "Wheel{" +
+                "brand='" + brand + '\'' +
+                ", type='" + type + '\'' +
+                ", Seasonality='" + Seasonality + '\'' +
+                ", pressure=" + pressure +
+                '}';
+    }
+
+    public void pomp(){
+        this.setPressure(this.getPressure() + 1);
+        System.out.println("Колесо накачане = " + this.pressure + " aтмосфери");
+    }
+
 }

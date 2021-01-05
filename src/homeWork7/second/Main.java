@@ -10,6 +10,4 @@ public class Main {
         myCalculator.devide();
 
     }
-
-
 }

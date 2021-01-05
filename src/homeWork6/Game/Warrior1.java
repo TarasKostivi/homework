@@ -11,4 +11,4 @@ public class Warrior1  extends Warrior{
     public boolean WarriorMen() {
         return false;
     }
-}
+

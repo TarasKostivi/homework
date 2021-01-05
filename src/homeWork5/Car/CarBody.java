@@ -1,31 +1,46 @@
 package homeWork5.Car;
 
-public class CarBody extends Car {
-    private double sizeCarBody;
-    private double widthCarBody;
-    
-    public CarBody(String model, int year, String color, double sizeCarBody, double widthCarBody) {
-        super(model, year, color);
-        this.sizeCarBody = sizeCarBody;
-        this.widthCarBody = widthCarBody;
+public class CarBody {
+
+      private double length;
+      private double height;
+      private double wight;
+
+    public CarBody(double length, double height, double wight) {
+        this.length = length;
+        this.height = height;
+        this.wight = wight;
     }
 
-    public double getSizeCarBody() {
-        return sizeCarBody;
+    public double getLength() {
+        return length;
     }
 
-    public void setSizeCarBody(double sizeCarBody) {
-        this.sizeCarBody = sizeCarBody;
+    public void setLength(double length) {
+        this.length = length;
     }
 
-    public double getWidthCarBody() {
-        return widthCarBody;
+    public double getHeight() {
+        return height;
     }
 
-    public void setWidthCarBody(double widthCarBody) {
-        this.widthCarBody = widthCarBody;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public void sizeBody(){
+    public double getWight() {
+        return wight;
+    }
+
+    public void setWight(double wight) {
+        this.wight = wight;
+    }
+
+    public double getPerimeter(){
+        return 2 * (length + wight);
+    }
+
+    public void print(){
+        System.out.println("Perimeter " + getPerimeter());
     }
 }

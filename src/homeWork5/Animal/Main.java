@@ -2,7 +2,6 @@ package homeWork5.Animal;
 
 public class Main {
     public static void main(String[] args) {
-
         Animal animal = new Animal("Lopard", 20, 7);
 
         animal.setName("Леопард");
@@ -14,7 +13,5 @@ public class Main {
         animal.setSpeed(2);
         animal.setAge(14);
         animal.characteristic();
-
-
     }
 }

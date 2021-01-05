@@ -50,13 +50,5 @@ public class Main {
         warrior2.died(warrior1);
 
         warrior2.theEnd();
-
-
-
-
-
-
-
-
     }
 }
