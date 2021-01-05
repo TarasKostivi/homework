@@ -4,15 +4,13 @@ public abstract class Warrior {
     private String name;
     private int hp;
     private String weapon;
-    private int number;
     private int damage;
 
 
-    public Warrior(String name, int hp, String weapon, int number, int damage) {
+    public Warrior(String name, int hp, String weapon, int damage) {
         this.name = name;
         this.hp = hp;
         this.weapon = weapon;
-        this.number = number;
         this.damage = damage;
     }
 
@@ -40,14 +38,6 @@ public abstract class Warrior {
         this.weapon = weapon;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
     public int getDamage() {
         return damage;
     }
@@ -59,19 +49,28 @@ public abstract class Warrior {
     public abstract boolean WarriorMen();
 
 
-    public void startFire(){
+    public void characteristic(){
         System.out.println(name);
         System.out.println("hp: " + hp);
-        System.out.println("Weapon: " + weapon + "("+ damage +")");
+        System.out.println("Weapon: " + weapon + "("+ this.getDamage() +")");
     }
 
     public void battle(){
         System.out.println("BATTLE ! ! !");
     }
 
-    public void warriorDamage(){
-        System.out.println(name + "поцілив в Warrior 1");
-        System.out.print("Warrior 1 hp :" );
-        System.out.println(hp -= damage);
+    public void attack(Warrior warrior){
+        System.out.println(this.getName() + " поцілив в " + warrior.getName());
+    }
+    public void kick( Warrior warrior){
+        System.out.print(warrior.getName() + " ");
+        System.out.println(warrior.getHp() - this.getDamage());
+    }
+
+    public void died(Warrior warrior){
+        System.out.println(warrior.getName() + " помер.");
+    }
+    public void theEnd(){
+        System.out.println("Битва закінчилась! Виграв воїн №2");
     }
 }
