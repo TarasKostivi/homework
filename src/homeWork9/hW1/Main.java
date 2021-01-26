@@ -4,19 +4,16 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-//        User user = new User("Ovan", 17);
-//        Scanner scanner = new Scanner(System.in);
-//        scanner.nextInt();
-//
-//
-//        try{
-//            user.validate();
-//        }catch (NotAnIntegerException e){
-//            System.out.println(e.getMessage());
-//        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int num = scanner.nextInt();
 
-
+        if (num % 2 == 0){
+            System.out.println("pair");
+        }else {
+            throw new Exception("No pair");
+        }
     }
 }
