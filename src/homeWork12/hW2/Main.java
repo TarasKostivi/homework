@@ -1,5 +1,6 @@
 package homeWork12.hW2;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
         linkedList.add(user1);
         linkedList.add(user2);
         linkedList.add(user3);
+
+        Collections.sort(linkedList);
 
         for (User strSortUser : linkedList) {
             System.out.println(strSortUser);
