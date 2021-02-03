@@ -16,11 +16,11 @@ public class Main {
             list.add(scanner.nextLine());
             System.out.println(list);
         }
-        System.out.println("всіх слова, які він ввів!");
+        System.out.println("Your worlds");
         for (String lis: list) {
             System.out.println(lis);
         }
-        System.out.println("які починаються на “s”");
+        System.out.println("Worlds start “s”");
         for (String s : list) {
             if(s.startsWith(prefix)){
                 result.add(s);
@@ -28,15 +28,15 @@ public class Main {
             System.out.println(result);
         }
 
-        System.out.println("кількість букв більше ніж 5!");
+        System.out.println("less 5!");
         for (String length : list) {
             if (length.length() >= 5){
                 System.out.println(length);
             }
         }
 
-        System.out.println("перевірити розмір ліста. " +
-                "Якщо більше 5, то видалити всі наступні елеменити ");
+        System.out.println("check list size. " +
+                "if more 5, delete next element ");
         while (list.size() > 5){
             list.remove(list.size() -1);
         }

@@ -1,5 +1,6 @@
 package homeWork12.hW3;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,8 +17,11 @@ public class Main {
         list.add(person3);
         list.add(person4);
 
+        Collections.sort(list);
+
         for (Person sortHair: list) {
             System.out.println(sortHair);
         }
+
     }
 }
