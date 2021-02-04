@@ -1,7 +1,5 @@
 package homeWork12.hW4;
 
-import homrWork13.Shoping;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,12 +26,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int select = scanner.nextInt();
 
-        commodities.get(scanner.nextInt());
+        Commodity someCommodity = commodities.get(scanner.nextInt());
 
 
-        printList(commodities);
+        System.out.println(someCommodity);
+
+
 
     }
 
