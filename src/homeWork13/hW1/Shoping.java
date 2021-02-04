@@ -1,4 +1,4 @@
-package homrWork13.hW1;
+package homeWork13.hW1;
 
 public class Shoping implements Comparable<Shoping> {
     private String nameProduct;
