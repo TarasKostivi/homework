@@ -1,4 +1,4 @@
-package homrWork13;
+package homrWork13.hW1;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
