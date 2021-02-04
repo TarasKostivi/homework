@@ -1,4 +1,4 @@
-package homrWork13.hW1.hW2;
+package homeWork13.hW2;
 
 public class Car implements Comparable<Car> {
     private String name;

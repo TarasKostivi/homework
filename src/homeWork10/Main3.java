@@ -1,4 +1,4 @@
-package hw10;
+package homeWork10;
 import java.util.Scanner;
 
 public class Main3 {

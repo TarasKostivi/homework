@@ -1,4 +1,4 @@
-package hw10.hw5;
+package homeWork10.hw5;
 
 public class Main {
     public static void main(String[] args) {
