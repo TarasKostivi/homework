@@ -6,7 +6,7 @@ public abstract class Main {
 
         Lilies lilies = new Lilies("Red", 10, "lilia");
         Orchids orchids = new Orchids("Blue", 10, "orchid");
-        Roses roses = new Roses("purpure", 10, "Roses");
+        Roses roses = new Roses("Green", 10, "Roses");
 
         lilies.setName("Lilies");
         lilies.setPrice(20);
