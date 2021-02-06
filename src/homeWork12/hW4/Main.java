@@ -1,5 +1,4 @@
 package homeWork12.hW4;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,21 +20,14 @@ public class Main {
 //        Collections.sort(commodities, new ComparatorByLength());
 //        Collections.sort(commodities, new ComparatorByWight());
 //        Collections.sort(commodities, new ComparatorByVaga());
-
-
+        printList(commodities);
 
         Scanner scanner = new Scanner(System.in);
-
-
+        System.out.print("Enter index items: ");
         Commodity someCommodity = commodities.get(scanner.nextInt());
-
-
-        System.out.println(someCommodity);
-
-
-
+        System.out.print(someCommodity);
+        System.exit(0);
     }
-
     private static void printList(List<?> list){
         for (Object elem : list) {
             System.out.println(elem + " ");
