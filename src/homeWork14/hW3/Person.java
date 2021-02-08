@@ -1,4 +1,4 @@
-package homeWork14.hW2;
+package homeWork14.hW3;
 
 public class Person {
     private String name;
@@ -27,6 +27,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return  name + " " + age;
+        return name + " " + age;
     }
 }
