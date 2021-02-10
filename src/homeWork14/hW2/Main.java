@@ -6,49 +6,56 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Account> accounts = new ArrayList<>();
-        accounts.add(new Account("Vasilius@gmail.com", "Vasilius210"));
-        
-        Map<Person, List<Account>> personAccountMap = new HashMap<>();
-        personAccountMap.put(new Person("Alex", 34), accounts);
-        personAccountMap.put(new Person("Ilex", 24), accounts);
-        personAccountMap.put(new Person("Klex", 54), accounts);
-        personAccountMap.put(new Person("Llex", 14), accounts);
+        List<Account> val1 = new ArrayList<>();
+        val1.add(new Account("Alex@gmail.com", "Alex1234"));
+        List<Account> val2 = new ArrayList<>();
+        val2.add(new Account("Igor@gmail.com", "Igor876541"));
+        List<Account> val3 = new ArrayList<>();
+        val3.add(new Account("Max@gmail.com", "Max545689"));
+        List<Account> val4 = new ArrayList<>();
+        val4.add(new Account("Dimon@gmail.com", "Dimon1234"));
 
-        for (Map.Entry<Person, List<Account>> someEntry1 : personAccountMap.entrySet()){
-            System.out.println("key: " + someEntry1.getKey());
-            for (Account f : someEntry1.getValue()){
-                System.out.println(f + " ");
+        Map<Person, List<Account>> personAccountMap = new HashMap<>();
+        personAccountMap.put(new Person("Alex", 34), val1);
+        personAccountMap.put(new Person("Igor", 24), val2);
+        personAccountMap.put(new Person("Max", 14),  val3);
+        personAccountMap.put(new Person("Dimon", 54), val4);
+
+        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
+            System.out.println("Key" + someEntry.getKey());
+            for (Account account: someEntry.getValue()) {
+                System.out.println(account);
             }
             System.out.println();
         }
 
+        for (Map.Entry<Person, List<Account>> deleteAccount: personAccountMap.entrySet()){
+            if (deleteAccount.getKey().equals("Dimon")){
+                deleteAccount.getValue().remove(1);
+            }
+        }
         for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            if (someEntry.getKey().equals("Alex")){
-                someEntry.getValue().remove(0);
+            System.out.println("Key " + someEntry.getKey());
+            for (Account account: someEntry.getValue()) {
+                System.out.println(account);
+            }
+            System.out.println();
+        }
+
+        for (Map.Entry<Person, List<Account>> deletePerson : personAccountMap.entrySet()){
+            Person person = deletePerson.getKey();
+            if (person.getName().equals("Alex")){
+                personAccountMap.remove(person);
             }
         }
 
-        for (Map.Entry<Person, List<Account>> myEntry : personAccountMap.entrySet())
-        {
-            System.out.println("Name: " + myEntry .getKey().getName() + " Age: " +
-                    myEntry.getKey().getAge() + "; " + myEntry .getValue());
-        }
-
-        for (Map.Entry<Person, List<Account>> deliteAccount : personAccountMap.entrySet()){
-            Person person = deliteAccount.getKey();
-            if (person.getName().equals("Alex") && person.getAge() == 21)
-                deliteAccount.setValue(null);
-        }
-
-        for (Map.Entry<Person, List<Account>> myEntry : personAccountMap.entrySet())
-        {
-            System.out.println(myEntry.getKey());
-            if (myEntry.getValue() != null){
-                System.out.println("Account : " + myEntry.getValue());
-            }else {
-                System.out.println("No Account");
+        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
+            System.out.println("Key " + someEntry.getKey());
+            for (Account account: someEntry.getValue()) {
+                System.out.println(account);
             }
+            System.out.println();
         }
+
     }
 }

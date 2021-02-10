@@ -9,9 +9,13 @@ public class Main {
         someAccounts.put(new Person("Alex", 21), new Account("Alex@gmail.com", "Alex1243"));
         someAccounts.put(new Person("Illa", 22), new Account("Illa@gmail.com", "Illa1243"));
         someAccounts.put(new Person("Sergei", 24), new Account("Sergei@gmail.com", "Sergei1243"));
-        someAccounts.remove(new Person("Alex", 21));
-        System.out.println(someAccounts);
 
+        for (Map.Entry<Person, Account> deliteAccount : someAccounts.entrySet()){
+            Person person = deliteAccount.getKey();
+            if (person.getName().equals("Alex")){
+                someAccounts.remove(person);
+            }
+        }
 
         for (Map.Entry<Person, Account> deliteAccount : someAccounts.entrySet()){
             Person person = deliteAccount.getKey();

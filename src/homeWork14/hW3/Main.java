@@ -7,7 +7,6 @@ public class Main {
         List<Animal> someAnimal = new LinkedList<>();
         someAnimal.add(new Animal("Barsik", "Dog"));
 
-        Map<Person, Animal> clobAnimal = new HashMap<>();
-        clobAnimal.put(new Person("Ola", 21), );
+        Map<Person, List<Animal>> map = new HashMap<>();
     }
 }
