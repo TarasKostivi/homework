@@ -24,4 +24,10 @@ public class MyEntry<K, V> {
     public void setVal(V val) {
         this.val = val;
     }
+
+    @Override
+    public String toString() {
+        return  keys +
+                " " + val;
+    }
 }
