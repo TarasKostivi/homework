@@ -1,4 +1,4 @@
-package homeWork14.hW2;
+package homeWork17.hw2;
 
 public class Person {
     private String name;
@@ -23,10 +23,5 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return  name + " " + age;
     }
 }
