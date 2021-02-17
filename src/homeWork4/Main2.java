@@ -10,8 +10,15 @@ public class Main2 {
         circle1.setRadius(10);
         circle1.setDiameter(10);
         circle1.print();
+
+        circle2.getArea();
+        circle2.getLength();
+        circle2.getRadius();
+        circle2.getDiameter();
+        circle2.print();
     }
 }
+
 //Створити клас Коло. Описати його двома полями: радіус , діаметр.
 //Введений може бути дробовим.Написати два методи які будуть виводити на
 //екран площу кола і довжину кола. Для площі використати параметр - діаметр.

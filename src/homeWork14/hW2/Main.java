@@ -1,61 +1,68 @@
 package homeWork14.hW2;
 
-import homeWork14.Account;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Account> val1 = new ArrayList<>();
-        val1.add(new Account("Alex@gmail.com", "Alex1234"));
-        List<Account> val2 = new ArrayList<>();
-        val2.add(new Account("Igor@gmail.com", "Igor876541"));
-        List<Account> val3 = new ArrayList<>();
-        val3.add(new Account("Max@gmail.com", "Max545689"));
-        List<Account> val4 = new ArrayList<>();
-        val4.add(new Account("Dimon@gmail.com", "Dimon1234"));
+        Car car1 = new Car("Lamborgini", 2);
+        Car car2 = new Car("Audi a4", 4);
+        Car car3 = new Car("Ford", 7);
+        Car car4 = new Car("Dord fiesta", 8);
+        Car car5 = new Car("Uord focus", 3);
 
-        Map<Person, List<Account>> personAccountMap = new HashMap<>();
-        personAccountMap.put(new Person("Alex", 34), val1);
-        personAccountMap.put(new Person("Igor", 24), val2);
-        personAccountMap.put(new Person("Max", 14),  val3);
-        personAccountMap.put(new Person("Dimon", 54), val4);
+        List<Car> someCar = new LinkedList<>();
+        someCar.add(car1);
+        someCar.add(car2);
+        someCar.add(car3);
+        someCar.add(car4);
+        someCar.add(car5);
 
-        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key" + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
+        printList(someCar);
+
+        Collections.sort(someCar);
+        printList(someCar);
+
+        HashSet<Car> someCar2 = new HashSet<>();
+        someCar2.add(car1);
+        someCar2.add(car2);
+        someCar2.add(car3);
+        someCar2.add(car4);
+        someCar2.add(car5);
+
+        Collections.sort(someCar);
+        for (Car strSort2: someCar2) {
+            System.out.println(strSort2);
         }
 
-        for (Map.Entry<Person, List<Account>> deleteAccount: personAccountMap.entrySet()){
-            if (deleteAccount.getKey().equals("Dimon")){
-                deleteAccount.getValue().remove(1);
-            }
-        }
-        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key " + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
+        LinkedHashSet<Car> someCar3  = new LinkedHashSet<>();
+        someCar3.add(car1);
+        someCar3.add(car2);
+        someCar3.add(car3);
+        someCar3.add(car4);
+        someCar3.add(car5);
+
+        for (Car strSort2: someCar3) {
+            System.out.println(strSort2);
         }
 
-        for (Map.Entry<Person, List<Account>> deletePerson : personAccountMap.entrySet()){
-            Person person = deletePerson.getKey();
-            if (person.getName().equals("Alex")){
-                personAccountMap.remove(person);
-            }
+        TreeSet<Car> someCar4 = new TreeSet<>();
+        someCar4.add(car1);
+        someCar4.add(car2);
+        someCar4.add(car3);
+        someCar4.add(car4);
+        someCar4.add(car5);
+
+        for (Car strSort2: someCar4) {
+            System.out.println(strSort2);
         }
 
-        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key " + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
-        }
 
+    }
+    private static void printList(List<?> list){
+        for (Object elem : list) {
+            System.out.println(elem + " ");
+        }
+        System.out.println();
     }
 }

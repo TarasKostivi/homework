@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Main2 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        // Створємо зміну а і передаємо в switch  стіоріюємо case номер і його дії в середені
         int a = scanner.nextInt();
-
         switch (a){
             case 29: {
                 System.out.println("Monday");
@@ -58,6 +58,7 @@ public class Main2 {
         }
     }
 }
+
 //2. Створити стрічкову змінну яка зберігатиме день тижня.
 // Ввести значення з клавіатури. Використовуючи конструкцію
 // switch скласти розклад на тиждень. В залежності від дня
