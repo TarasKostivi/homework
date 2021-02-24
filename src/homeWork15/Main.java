@@ -12,13 +12,6 @@ public class Main {
 
         for (Map.Entry<Person, Account> deliteAccount : someAccounts.entrySet()){
             Person person = deliteAccount.getKey();
-            if (person.getName().equals("Alex")){
-                someAccounts.remove(person);
-            }
-        }
-
-        for (Map.Entry<Person, Account> deliteAccount : someAccounts.entrySet()){
-            Person person = deliteAccount.getKey();
             if (person.getName().equals("Alex") && person.getAge() == 21)
             deliteAccount.setValue(null);
         }
@@ -30,6 +23,13 @@ public class Main {
                 System.out.println("Account : " + myEntry.getValue().getEmail() + " Password: " + myEntry.getValue().getPassword());
             }else {
                 System.out.println("No Account");
+            }
+        }
+
+        for (Map.Entry<Person, Account> deliteAccount : someAccounts.entrySet()){
+            Person person = deliteAccount.getKey();
+            if (person.getName().equals("Alex")){
+                someAccounts.remove(person);
             }
         }
 

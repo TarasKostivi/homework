@@ -22,13 +22,29 @@ public class Main {
         mapClub.put(new Person("Taras", 51), cat2);
 
 
+        for (Map.Entry<Person, List<Animal>> deliteAnnimal : mapClub.entrySet()){
+            Person person = deliteAnnimal.getKey();
+            if (person.getName().equals("Oleg") && person.getAge() == 21)
+                deliteAnnimal.setValue(null);
+        }
+
+        for (Map.Entry<Person, List<Animal>> myEntry : mapClub.entrySet())
+        {
+            System.out.println(myEntry.getKey());
+            if (myEntry.getValue() != null){
+                System.out.println("Account : " + myEntry.getValue());
+            }else {
+                System.out.println("No Account");
+            }
+        }
         for (Map.Entry<Person, List<Animal>> print: mapClub.entrySet()) {
             System.out.println(print.getKey() + " " + print.getValue());
         }
 
         for (Map.Entry<Person, List<Animal>> deleteAnimal: mapClub.entrySet()){
-            if (deleteAnimal.getKey().equals("Igor")){
-                deleteAnimal.getValue().remove(1);
+            Person person = deleteAnimal.getKey();
+            if (person.getName().equals("Igor")){
+                mapClub.remove(person);
             }
         }
 
@@ -36,13 +52,6 @@ public class Main {
             System.out.println(print.getKey() + " " + print.getValue());
         }
 
-        for (Map.Entry<Person, List<Animal>> someEntry : mapClub.entrySet()){
-            System.out.println("Key " + someEntry.getKey());
-            for (Animal account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
-        }
         System.exit(0);
     }
 }

@@ -21,41 +21,34 @@ public class Main {
         personAccountMap.put(new Person("Max", 14),  val3);
         personAccountMap.put(new Person("Dimon", 54), val4);
 
-        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key" + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
+
+        for (Map.Entry<Person, List<Account>> deliteAccount : personAccountMap.entrySet()){
+            Person person = deliteAccount.getKey();
+            if (person.getName().equals("Alex") && person.getAge() == 34)
+                deliteAccount.setValue(null);
         }
 
-        for (Map.Entry<Person, List<Account>> deleteAccount: personAccountMap.entrySet()){
-            if (deleteAccount.getKey().equals("Dimon")){
-                deleteAccount.getValue().remove(1);
+        for (Map.Entry<Person, List<Account>> myEntry : personAccountMap.entrySet())
+        {
+            System.out.println(myEntry.getKey());
+            if (myEntry.getValue() != null){
+                System.out.println("Account : " + myEntry.getValue());
+            }else {
+                System.out.println("No Account");
             }
-        }
-        for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key " + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
         }
 
-        for (Map.Entry<Person, List<Account>> deletePerson : personAccountMap.entrySet()){
-            Person person = deletePerson.getKey();
-            if (person.getName().equals("Alex")){
-                personAccountMap.remove(person);
+        for (Map.Entry<Person, List<Account>> delitePerson : personAccountMap.entrySet()){
+            Person person1 = delitePerson.getKey();
+            if (person1.getName().equals("Alex") && person1.getAge() == 34){
+                personAccountMap.remove(person1);
             }
         }
 
         for (Map.Entry<Person, List<Account>> someEntry : personAccountMap.entrySet()){
-            System.out.println("Key " + someEntry.getKey());
-            for (Account account: someEntry.getValue()) {
-                System.out.println(account);
-            }
-            System.out.println();
+            System.out.println("Key " + someEntry.getKey() + " Value::" + someEntry.getValue());
         }
+
 
     }
 }
