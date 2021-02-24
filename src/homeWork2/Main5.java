@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Main5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("8 * 9 = ");
 
+        System.out.print("8 * 9 = ");
         while (scanner.nextInt() != 72){
             System.out.println("Спробуйте ще раз");
         }
