@@ -1,4 +1,4 @@
-package HomeWork20.hW1;
+package homeWork20.hW1;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
