@@ -1,4 +1,4 @@
-package HomeWork20.hW1;
+package homeWork20.hW1;
 
 @someAnot(value = "title", number = 45)
 

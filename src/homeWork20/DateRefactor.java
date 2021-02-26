@@ -1,7 +1,6 @@
-package HomeWork20;
+package homeWork20;
 
 import java.time.*;
-import java.util.Date;
 
 public class DateRefactor {
     public static java.util.Date asDate(LocalDate localDate){
