@@ -35,7 +35,9 @@ public class Main {
         //Знайти елемент в колекції рівний «Three» або кинути помилку
         System.out.println("Знаходить елемент в колекції рівний «Three» або кинути помилку");
         try {
-            String three = list.stream().filter(s -> s.equals("Three")).findAny()
+            String three = list.stream()
+                    .filter(s -> s.equals("Three"))
+                    .findAny()
                     .orElseThrow(() -> new Exception("No word Three"));
             System.out.println(three);
         } catch (Exception e) {
@@ -66,8 +68,9 @@ public class Main {
         //Знайти чи існують хоч один «One» елемент в колекції
         System.out.println("Знаходить чи існують хоч один «One» елемент в колекції");
         try {
-           String thOne = list.stream().filter(s -> s.equals("One")).findAny()
-                    .orElseThrow(() -> new Exception("No word o"));
+           String thOne = list.stream()
+                   .filter(s -> s.equals("One")).findAny()
+                   .orElseThrow(() -> new Exception("No word o"));
             System.out.println(thOne);
         } catch (Exception e) {
             e.printStackTrace();
@@ -75,7 +78,8 @@ public class Main {
 
         //Знайти чи є символ «o» у всіх елементів колекції
         System.out.println("Знаходить чи є символ «o» у всіх елементів колекції");
-        long count = list.stream().filter((s) -> s.contains("o"))
+        long count = list.stream()
+                .filter((s) -> s.contains("o"))
                 .count();
         System.out.println(count);
 
@@ -87,8 +91,10 @@ public class Main {
 
         //Відсортувати колекцію рядків за алфавітом і прибрати дублікати
         System.out.println("Відсортовано колекцію рядків за алфавітом і прибрав дублікати");
-        List<String> sortedList = list.stream().sorted().distinct().collect(Collectors.toList());
-
+        List<String> sortedList = list.stream()
+                .sorted()
+                .distinct()
+                .collect(Collectors.toList());
         sortedList.forEach(System.out::println);
     }
 }

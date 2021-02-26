@@ -36,7 +36,7 @@ public class StremTest {
                 .forEach(System.out::println);
 
         System.out.println("\nSort by ///");
-        list.stream().sorted().collect(Collectors.toList()).forEach(System.out::println);
+        list.stream().sorted().forEach(System.out::println);
 
         System.out.println("\nАналог map, але повертає числовий" +
                 " стрім (тобто стрім з числових примітивів)");

@@ -14,10 +14,10 @@ public class Start {
         personList.add(new Person("Oleksandr", 40));
 
         // Збільшувати всім вік на 5 років
-        personList.stream().peek(person -> person.setAge(person.getAge() + 5)).forEach(System.out::println);
+        personList.stream().map(person -> person.getAge() + 5).forEach(System.out::println);
 
         System.out.println("\nЗбільшує регістер");
-        personList.stream().peek(person -> person.setName(person.getName().toUpperCase(Locale.ROOT))).forEach(System.out::println);
+        personList.stream().map(person -> person.getName().toUpperCase(Locale.ROOT)).forEach(System.out::println);
 
         System.out.println("\nКомпаратор");
         personList.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).forEach(System.out::println);
