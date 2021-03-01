@@ -16,8 +16,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // Зчитуємо дані з файла DeviceInfo.txt за допомогою Stream
          Stream<String> deviceStream = Files
-            .lines(Paths.get("C:\\Users\\taras\\IdeaProjects\\homework1\\src\\TestJavaCore\\DeviceInfo.txt"));
+            .lines(Paths.get("C:\\Users\\Study\\IdeaProjects\\homework0\\src\\TestJavaCore\\DeviceInfo.txt"));
+        List<Device> listDevise = deviceStream.map(s -> s.split(", "))
+                .map(array -> new Device(Long.parseLong(array[0]), array[1], array[2], Integer.parseInt(array[3])))
+                .collect(Collectors.toList());
 
+        while (true) {
         // З допомогою сканера зчитуємо дані з консолі і створюємо консольне меню для користувача
         Scanner scanner = new Scanner(System.in);
         System.out.println("If you want to display the list, press 1");
@@ -32,65 +36,65 @@ public class Main {
 
         //  Ділимо радки на частини мотодом split
         //  масив використовується для створення об'єкта Device і записуємо в collect і зберігаємо в зміну List<Device>
-        List<Device> listDevise = deviceStream.map(s -> s.split(", "))
-                .map(array -> new Device(Long.parseLong(array[0]), array[1], array[2], Integer.parseInt(array[3])))
-                .collect(Collectors.toList());
 
-        switch (number) {
-            case 1: {
-                // Виводимо список сористувачу
-                listDevise.forEach(System.out::println);
-                break;
-            }
-            case 2: {
-                // Шукаємо Device за серійним номером(Якщо
-                // такого Device немає кидати помилку
-                try {
-                    listDevise.stream().map(device -> device.getSerialNumber() != scanner.nextLong())
-                            .findAny()
-                            .orElseThrow(() -> new Exception("There is no such Serial Number"));
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+            switch (number) {
+                case 1: {
+                    // Виводимо список сористувачу
+                    listDevise.forEach(System.out::println);
+                    break;
+                }
+                case 2: {
+                    // Шукаємо Device за серійним номером(Якщо
+                    // такого Device немає кидати помилку
+                    System.out.println("Enter your Serial number");
+                    int num = scanner.nextInt();
 
-                } System.out.println(listDevise);
-                break;
-            }
-            case 3: {
-                // Відсортовуємо список методом sorted записуємо в collect і проходимся по list forEach
-                listDevise.stream()
-                        .sorted(Comparator.comparing(Device::getBrand))
-                        .collect(Collectors.toList())
-                        .forEach(System.out::println);
-                break;
-            }
-            case 4: {
-                // Виводиться Device у яких ціна більша ніж 400.
-                listDevise.stream().filter(device -> device.getPrice() > 400)
-                        .collect(Collectors.toList())
-                        .forEach(System.out::println);
-                break;
-            }
-            case 5: {
-                //Виводиться Device у яких в серійному
-                //номері є нуль(0) і ціна менша за 800.
-                listDevise.stream()
-                        .filter((s) -> s.getSerialNumber() > 0)
-                        .collect(Collectors.toList()).forEach(System.out::println);
-                listDevise.stream()
-                        .filter((p) -> p.getPrice() < 800)
-                        .collect(Collectors.toList()).forEach(System.out::println);
-                break;
-            }
-            case 6: {
-                // Виводимо найдорожчий товар.
-                listDevise.stream().reduce((p1, p2) -> p1.getPrice() > p2.getPrice() ? p1 : p2)
-                        .ifPresent(System.out::println);
-                break;
-            }
-            default: {
-                // Виходим із системи
-               System.exit(0);
+                    try {
+                        listDevise.stream().filter(device -> device.getSerialNumber() == num)
+                                .findAny()
+                                .orElseThrow(() -> new Exception("There is no such Serial Number"));
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+
+                    }
+                    break;
+                }
+                case 3: {
+                    // Відсортовуємо список методом sorted записуємо в collect і проходимся по list forEach
+                    listDevise.stream()
+                            .sorted(Comparator.comparing(Device::getBrand))
+                            .collect(Collectors.toList())
+                            .forEach(System.out::println);
+                    break;
+                }
+                case 4: {
+                    // Виводиться Device у яких ціна більша ніж 400.
+                    listDevise.stream().filter(device -> device.getPrice() > 400)
+                            .collect(Collectors.toList())
+                            .forEach(System.out::println);
+                    break;
+                }
+                case 5: {
+                    //Виводиться Device у яких в серійному
+                    //номері є нуль(0) і ціна менша за 800.
+                    listDevise.stream()
+                            .filter(s -> String.valueOf(s.getSerialNumber()).contains("0"))
+                            .filter(s -> s.getPrice() < 800)
+                            .collect(Collectors.toList()).forEach(System.out::println);
+                    break;
+                }
+                case 6: {
+                    // Виводимо найдорожчий товар.
+                    listDevise.stream().reduce((p1, p2) -> p1.getPrice() > p2.getPrice() ? p1 : p2)
+                            .ifPresent(System.out::println);
+                    break;
+                }
+                default: {
+                    // Виходим із системи
+                    System.exit(0);
+                }
             }
         }
     }
