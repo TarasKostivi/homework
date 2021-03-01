@@ -47,6 +47,7 @@ public class Test2 {
 
         //collect()
         //Представлення результатів у вигляді колекцій та інших структур даних
+        System.out.println("''dsd");
         List<String> collection = list2.stream()
                 .filter((s) -> s.contains("a"))
                 .collect(Collectors.toList());
