@@ -17,6 +17,9 @@ public class Main {
         // Зчитуємо дані з файла DeviceInfo.txt за допомогою Stream
          Stream<String> deviceStream = Files
             .lines(Paths.get("C:\\Users\\Study\\IdeaProjects\\homework0\\src\\TestJavaCore\\DeviceInfo.txt"));
+
+        //  Ділимо радки на частини мотодом split
+        //  масив використовується для створення об'єкта Device і записуємо в collect і зберігаємо в зміну List<Device>
         List<Device> listDevise = deviceStream.map(s -> s.split(", "))
                 .map(array -> new Device(Long.parseLong(array[0]), array[1], array[2], Integer.parseInt(array[3])))
                 .collect(Collectors.toList());
@@ -33,11 +36,6 @@ public class Main {
 
         // Записуємо зміну і зчитуємо ведене число
         int number = scanner.nextInt();
-
-        //  Ділимо радки на частини мотодом split
-        //  масив використовується для створення об'єкта Device і записуємо в collect і зберігаємо в зміну List<Device>
-
-
             switch (number) {
                 case 1: {
                     // Виводимо список сористувачу
